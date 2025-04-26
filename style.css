@@ -1,7 +1,7 @@
 /* Basic Reset */
 * {
     margin: 0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -56,7 +56,7 @@ html, body {
 
 /* Section Styles */
 .section {
-    padding: 4rem 1rem;
+    padding: 1rem;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
@@ -71,7 +71,7 @@ html, body {
 }
 
 .section h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-bottom: 1rem;
     color: #111;
 }
@@ -84,18 +84,21 @@ html, body {
 
 /* Visualization Container */
 .viz-container {
-    margin: 3rem 0;
-    padding: 2rem;
-    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
     border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    max-width: 800px; /* Optional max-width for larger screens */
 }
 
-/* Visualization hover effect */
-.viz-container:hover {
-    background-color: #ddd;
+iframe {
+    width: 100%;       /* Full width of its parent */
+    height: 600px;     /* Fixed height or auto if you wish dynamic sizing */
+    display: block;    /* Display block removes small extra space */
+    border: none;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
