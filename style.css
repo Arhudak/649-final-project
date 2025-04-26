@@ -16,7 +16,7 @@ html, body {
 body {
     background: 
         radial-gradient(circle, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 60%),
-        linear-gradient(270deg, #e0f7fa, #e0ffe0, #fff9e0, #f4f4f4);
+        linear-gradient(270deg, #89e1ed, #d1f0dd, #c8d2f2, #aeb5db);
     background-size: 100% 100%, 600% 600%; /* Ensure radial gradient covers the whole area */
     animation: gradientMovement 15s ease infinite; /* Animation parameters */
 }
