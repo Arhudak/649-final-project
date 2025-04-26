@@ -1,15 +1,31 @@
 /* Basic Reset */
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
+    height: 100%;
     font-family: 'Georgia', serif;
     color: #333;
-    background: #fff;
     line-height: 1.7;
+}
+
+
+body {
+    background: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 60%),
+        linear-gradient(270deg, #e0f7fa, #e0ffe0, #fff9e0, #f4f4f4);
+    background-size: 100% 100%, 600% 600%; /* Ensure radial gradient covers the whole area */
+    animation: gradientMovement 15s ease infinite; /* Animation parameters */
+}
+
+/* Gradient Animation */
+@keyframes gradientMovement {
+    0% { background-position: 0% 50%, 0% 50%; }
+    50% { background-position: 100% 50%, 100% 50%; }
+    100% { background-position: 0% 50%, 0% 50%; }
 }
 
 /* Accessibility: Skip to Main Content */
@@ -35,7 +51,7 @@ html, body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f4f4f4;
+    background: transparent;
     text-align: center;
     padding: 2rem;
 }
@@ -46,12 +62,18 @@ html, body {
     max-width: 700px;
     line-height: 1.2;
     margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 .header-section p {
     font-size: 1.5em;
     color: #666;
     max-width: 600px;
+}
+
+.main-content {
+    padding: 2rem;
 }
 
 /* Section Styles */
@@ -89,16 +111,15 @@ html, body {
     align-items: center;
     margin: 3rem auto;
     border-radius: 10px;
-    max-width: 800px; /* Optional max-width for larger screens */
+    max-width: 800px;
 }
 
 iframe {
-    width: 100%;       /* Full width of its parent */
-    height: 600px;     /* Fixed height or auto if you wish dynamic sizing */
-    display: block;    /* Display block removes small extra space */
+    width: 100%;
+    height: 600px;
+    display: block;
     border: none;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
