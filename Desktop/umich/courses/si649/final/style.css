@@ -1,0 +1,121 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #fff;
+    line-height: 1.7;
+}
+
+/* Accessibility: Skip to Main Content */
+.skip-to-main {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-to-main:focus {
+    left: 10px;
+    top: 10px;
+}
+
+/* Full Screen Title Section */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header-section h1 {
+    font-size: 3.5em;
+    color: #222;
+    max-width: 700px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.header-section p {
+    font-size: 1.5em;
+    color: #666;
+    max-width: 600px;
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.section p {
+    font-size: 1.2em;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+/* Visualization Container */
+.viz-container {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #eee;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Visualization hover effect */
+.viz-container:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2.5em;
+    }
+    
+    .header-section p {
+        font-size: 1.2em;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .section h2 {
+        font-size: 2em;
+    }
+    
+    .section p {
+        font-size: 1em;
+    }
+}
